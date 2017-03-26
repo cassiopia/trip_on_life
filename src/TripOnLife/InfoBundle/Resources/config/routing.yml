@@ -1,0 +1,5 @@
+TripOnLifeInfoBundle_contact:
+    path:     /contact
+    defaults: { _controller: "TripOnLifeInfoBundle:Page:contact" }
+    requirements:
+         methods:  GET

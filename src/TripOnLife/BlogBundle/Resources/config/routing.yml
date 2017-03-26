@@ -1,0 +1,5 @@
+TripOnLifeBlogBundle_blog:
+    path:     /blog
+    defaults: { _controller: "TripOnLifeBlogBundle:Page:index" }
+    requirements:
+         methods:  GET

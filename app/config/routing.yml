@@ -1,6 +1,15 @@
-blogger_blog:
-    resource: "@BloggerBlogBundle/Resources/config/routing.yml"
-    prefix:   /blogger
+trip_on_life_info:
+    resource: "@TripOnLifeInfoBundle/Resources/config/routing.yml"
+    prefix:   /
+
+trip_on_life_blog:
+    resource: "@TripOnLifeBlogBundle/Resources/config/routing.yml"
+    prefix:   /
+
+trip_on_life_photo:
+    resource: "@TripOnLifePhotoBundle/Resources/config/routing.yml"
+    prefix:   /
+
 
 #app:
 #    resource: "@AppBundle/Controller/"

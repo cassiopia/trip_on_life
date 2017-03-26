@@ -7,7 +7,7 @@ define( "EMAIL_SUBJECT", "$subject" );
 
 // Read the form values
 $success = false;
-$senderName = isset( $_POST['senderName'] ) ? preg_replace( "/[^\.\-\' a-zA-Z0-9]/", "", $_POST['senderName'] ) : "";
+$senderName = isset( $_POST['contact[senderName]'] ) ? preg_replace( "/[^\.\-\' a-zA-Z0-9]/", "", $_POST['contact[senderName] '] ) : "";
 $senderEmail = isset( $_POST['senderEmail'] ) ? preg_replace( "/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['senderEmail'] ) : "";
 $subject = isset( $_POST['subject'] ) ? preg_replace( "/(From:|To:|BCC:|CC:|Subject:|Content-Type:)/", "", $_POST['subject'] ) : "";
 $message = isset( $_POST['message'] ) ? preg_replace( "/(From:|To:|BCC:|CC:|Subject:|Content-Type:)/", "", $_POST['message'] ) : "";

@@ -22,7 +22,7 @@ function init() {
   $('a[href="#contactForm"]').click( function() {
     $('#contactForm').fadeTo( 'slow', .2 );
     $('#contactForm').fadeIn( 'slow', function() {
-      $('#senderName').focus();
+      $('#contact_senderName').focus();
     } )
 
     return false;
@@ -38,7 +38,7 @@ function submitForm() {
 
   // Are all the fields filled in?
 
-  if ( !$('#senderName').val() || !$('#senderEmail').val() || !$('#message').val() ) {
+  if ( !$('#contact_senderName').val() || !$('#senderEmail').val() || !$('#message').val() ) {
 
     // No; display a warning message and return to the form
     $('#incompleteMessage').fadeIn().delay(messageDelay).fadeOut();
@@ -78,7 +78,7 @@ function submitFinished( response ) {
     // 3. Fade the content back in
 
     $('#successMessage').fadeIn().delay(messageDelay).fadeOut();
-    $('#senderName').val( "" );
+    $('#contact_senderName').val( "" );
     $('#senderEmail').val( "" );
     $('#message').val( "" );
 

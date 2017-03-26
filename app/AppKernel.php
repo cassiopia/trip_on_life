@@ -16,7 +16,9 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
            // new AppBundle\AppBundle(),
-            new Blogger\BlogBundle\BloggerBlogBundle(),
+            new TripOnLife\PhotoBundle\TripOnLifePhotoBundle(),
+            new TripOnLife\BlogBundle\TripOnLifeBlogBundle(),
+            new TripOnLife\InfoBundle\TripOnLifeInfoBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
