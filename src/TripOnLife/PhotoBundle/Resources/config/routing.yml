@@ -1,0 +1,5 @@
+TripOnLifePhotoBundle_photo:
+    path:     /photo
+    defaults: { _controller: "TripOnLifePhotoBundle:Page:index" }
+    requirements:
+         methods:  GET

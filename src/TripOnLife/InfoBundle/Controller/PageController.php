@@ -15,6 +15,10 @@ class PageController extends Controller
 
     }
 
+    public function aboutAction()
+    {
+        return $this->render('TripOnLifeInfoBundle:Page:about.html.twig');
+    }
 
     public function contactAction(Request $request)
     {

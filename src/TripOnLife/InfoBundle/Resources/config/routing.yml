@@ -2,4 +2,10 @@ TripOnLifeInfoBundle_contact:
     path:     /contact
     defaults: { _controller: "TripOnLifeInfoBundle:Page:contact" }
     requirements:
+         methods:  GET,
+
+TripOnLifeInfoBundle_about:
+    path:     /about
+    defaults: { _controller: "TripOnLifeInfoBundle:Page:about" }
+    requirements:
          methods:  GET
