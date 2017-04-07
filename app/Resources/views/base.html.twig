@@ -29,17 +29,17 @@
     <link href='{{ asset('http://fonts.googleapis.com/css?family=Open+Sans:400,100,100italic,200,300,300italic,400italic,500,700,900') }}' rel='stylesheet' type='text/css'>
 
     <!-- CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
-    <link href="js/owl-carousel/owl.theme.css" rel="stylesheet">
-    <link href="js/owl-carousel/owl.transitions.css" rel="stylesheet">
-    <link href="js/easytabs/easy-responsive-tabs.css" rel="stylesheet"/>
-    <link href="js/flex-slider/flexslider.css" rel="stylesheet" />
-    <link href="css/prettyphoto.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/style-responsive.css" rel="stylesheet">
-    <link href="plugins/lightbox/dist/css/lightbox.css" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('js/owl-carousel/owl.carousel.csss') }}" rel="stylesheet">
+    <link href="{{ asset('js/owl-carousel/owl.theme.css') }}" rel="stylesheet">
+    <link href="{{ asset('js/owl-carousel/owl.transitions.css') }}" rel="stylesheet">
+    <link href="{{ asset('js/easytabs/easy-responsive-tabs.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('js/flex-slider/flexslider.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/prettyphoto.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style-responsive.css') }}" rel="stylesheet">
+    <link href="{{ asset('plugins/lightbox/dist/css/lightbox.css') }}" rel="stylesheet">
 
     <!-- Add custom CSS here -->
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
@@ -75,26 +75,15 @@
                         <ul class="nav navbar-nav navbar-right menu-effect">
 
                             <li>
-                                <a class="dropdown" data-hover="Распадайка&nbsp;&#9663;">Распадайка &#9662;</a>
+                                <a class="dropdown" data-hover="Блог">Блог &#9662;</a>
                                 <ul class="v-dropdown">
-                                    <li><a href="./about.html" data-hover="About&nbsp;Us&nbsp;1">About Us 1</a></li>
-                                    <li><a href="./about.html" data-hover="About&nbsp;Us&nbsp;2">About Us 2</a></li>
-                                    <li><a href="./about.html" data-hover="About&nbsp;Us&nbsp;3">About Us 3</a></li>
-                                    <li><a href="./about.html" data-hover="About&nbsp;Us&nbsp;4">About Us 4</a></li>
+                                    <li><a href="/blog/travel" data-hover="Туристическое">Туристическое</a></li>
+                                    <li><a href="/blog/programming" data-hover="Программирование">Программирование</a></li>
+                                    <li><a href="/blog/other" data-hover="Разное">Разное</a></li>
                                 </ul>
                             </li>
-                            {#<li>#}
-                                {#<a  href="{{ path('TripOnLifeInfoBundle_about') }}" class="dropdown" data-hover="О нас">О нас &#9662;</a>#}
-                                {#<ul class="v-dropdown">#}
-                                    {#<li><a href="./about.html" data-hover="About&nbsp;Us&nbsp;1">About Us 1</a></li>#}
-                                    {#<li><a href="./about.html" data-hover="About&nbsp;Us&nbsp;2">About Us 2</a></li>#}
-                                    {#<li><a href="./about.html" data-hover="About&nbsp;Us&nbsp;3">About Us 3</a></li>#}
-                                    {#<li><a href="./about.html" data-hover="About&nbsp;Us&nbsp;4">About Us 4</a></li>#}
-                                {#</ul>#}
-                            {#</li>#}
                             <li><a href="{{ path('TripOnLifeInfoBundle_about') }}" data-hover="О нас">О нас</a></li>
                             <li><a href="{{ path('TripOnLifePhotoBundle_photo') }}" data-hover="Фотографии">Фотографии</a></li>
-                            <li class="current"><a href="{{ path('TripOnLifeBlogBundle_blog') }}" data-hover="Блог">Блог</a></li>
                             <li><a href="{{ path('TripOnLifeInfoBundle_contact') }}" data-hover="Контакты">Контакты</a></li>
                         </ul>
                     </div>

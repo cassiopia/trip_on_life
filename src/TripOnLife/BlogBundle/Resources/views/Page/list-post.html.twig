@@ -1,0 +1,58 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+
+    <!--Подумать как лучше вынести хлебные крошки -->
+    <div class="row" data-animated="0">
+        <div class="col-md-12">
+            <div id="page-header">
+                <h3><span>Blog</span></h3>
+                <br/>
+                <br/>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" data-animated="0">
+        <div class="col-md-12">
+            <div id="m-blog-content">
+                <div class="row">
+                    {% for blog in blogs %}
+                        <div class="col-md-6" data-animated="0">
+                            <div class="item">
+                                <div class="mb-thumb">
+                                    <img src="{{ blog.image }}" class="img-responsive" alt=""/>
+                                    <div class="date">18<span>aug</span></div>
+                                    <span class="rmore">
+                                        <a href="{{ path('TripOnLifeBlogBundle_blog_showPost', { 'id': blog.id, 'type': blog.blogSection.name }) }}">
+                                            читать дальше
+                                        </a>
+                                    </span>
+                                </div>
+                                <h4>
+                                    <a href="{{ path('TripOnLifeBlogBundle_blog_showPost', { 'id': blog.id, 'type': blog.blogSection.name }) }}">
+                                        {{ blog.title }}
+                                    </a>
+                                </h4>
+                                <div class="blog-meta">
+                                    <span><i class="fa fa-comments"></i> 2 comments</span>
+                                    <span><i class="fa fa-user"></i> {{ blog.author}}</span>
+                                </div>
+                                <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor
+                                    aliquet. Aenean sollicitudin, lorem quis bibendum auctor</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                    <div class="page-nav" data-animated="0">
+                        <ul>
+                            <li class="active"><a href="#"><span>1</span></a></li>
+                            <li><a href="#"><span>2</span></a></li>
+                            <li><a href="#"><span>3</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

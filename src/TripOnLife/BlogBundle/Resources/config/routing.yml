@@ -2,4 +2,21 @@ TripOnLifeBlogBundle_blog:
     path:     /blog
     defaults: { _controller: "TripOnLifeBlogBundle:Page:index" }
     requirements:
+         methods:  GET,
+
+
+TripOnLifeBlogBundle_blog_listPost:
+    path:     /blog/{type}
+    defaults: { _controller: "TripOnLifeBlogBundle:Page:listPost" }
+    requirements:
          methods:  GET
+         type: \w+
+
+
+TripOnLifeBlogBundle_blog_showPost:
+    path:     /blog/{type}/{id}
+    defaults: { _controller: "TripOnLifeBlogBundle:Page:showPost" }
+    requirements:
+         methods:  GET
+         type: \w+
+         id: \d+
