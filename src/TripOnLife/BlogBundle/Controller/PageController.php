@@ -19,10 +19,10 @@ class PageController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $blogs = $em->getRepository('TripOnLifeBlogBundle:Blog')->getPostsByBlogSectionName($type);
+        $posts = $em->getRepository('TripOnLifeBlogBundle:Post')->getPostsByPostSectionName($type);
 
         return $this->render('TripOnLifeBlogBundle:Page:list-post.html.twig', array(
-            'blogs' => $blogs
+            'posts' => $posts
         ));
     }
 
@@ -30,10 +30,10 @@ class PageController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $blog = $em->getRepository('TripOnLifeBlogBundle:Blog')->find($id);
+        $post = $em->getRepository('TripOnLifeBlogBundle:Post')->find($id);
 
         return $this->render('TripOnLifeBlogBundle:Page:show-post.html.twig', array(
-            'blog' => $blog
+            'post' => $post
         ));
 
     }

@@ -4,11 +4,11 @@ namespace TripOnLife\BlogBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="TripOnLife\BlogBundle\Entity\Repository\BlogRepository")
- * @ORM\Table(name="blog", indexes={@ORM\Index(name="blog_section_id", columns={"blog_section_id"})})
+ * @ORM\Entity(repositoryClass="TripOnLife\BlogBundle\Entity\Repository\PostRepository")
+ * @ORM\Table(name="post", indexes={@ORM\Index(name="post_section_id", columns={"post_section_id"})})
  * @ORM\HasLifecycleCallbacks
  */
-class Blog
+class Post
 {
     public function __construct()
     {
@@ -62,15 +62,15 @@ class Blog
     protected $updated;
 
     /**
-     * @var \TripOnLife\BlogBundle\Entity\BlogSection
+     * @var \TripOnLife\BlogBundle\Entity\PostSection
      *
-     * @ORM\ManyToOne(targetEntity="\TripOnLife\BlogBundle\Entity\BlogSection")
+     * @ORM\ManyToOne(targetEntity="\TripOnLife\BlogBundle\Entity\PostSection")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="blog_section_id", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="post_section_id", referencedColumnName="id")
      * })
      */
 
-    protected $blogSection;
+    protected $postSection;
 
 
     /**
@@ -87,7 +87,7 @@ class Blog
      * Set title
      *
      * @param string $title
-     * @return Blog
+     * @return Post
      */
     public function setTitle($title)
     {
@@ -110,7 +110,7 @@ class Blog
      * Set author
      *
      * @param string $author
-     * @return Blog
+     * @return Post
      */
     public function setAuthor($author)
     {
@@ -133,7 +133,7 @@ class Blog
      * Set text
      *
      * @param string $text
-     * @return Blog
+     * @return Post
      */
     public function setBlog($text)
     {
@@ -156,7 +156,7 @@ class Blog
      * Set image
      *
      * @param string $image
-     * @return Blog
+     * @return Post
      */
     public function setImage($image)
     {
@@ -179,7 +179,7 @@ class Blog
      * Set tags
      *
      * @param string $tags
-     * @return Blog
+     * @return Post
      */
     public function setTags($tags)
     {
@@ -202,7 +202,7 @@ class Blog
      * Set created
      *
      * @param \DateTime $created
-     * @return Blog
+     * @return Post
      */
     public function setCreated($created)
     {
@@ -225,7 +225,7 @@ class Blog
      * Set updated
      *
      * @param \DateTime $updated
-     * @return Blog
+     * @return Post
      */
     public function setUpdated($updated)
     {
@@ -248,7 +248,7 @@ class Blog
      * Set text
      *
      * @param string $text
-     * @return Blog
+     * @return Post
      */
     public function setText($text)
     {
@@ -258,26 +258,26 @@ class Blog
     }
 
     /**
-     * Set blogSectionId
+     * Set postSection
      *
-     * @param \TripOnLife\BlogBundle\Entity\BlogSection $blogSectionId
-     * @return Blog
+     * @param \TripOnLife\BlogBundle\Entity\PostSection $postSection
+     * @return Post
      */
-    public function setBlogSection(\TripOnLife\BlogBundle\Entity\BlogSection $blogSection = null)
+    public function setBlogSection(\TripOnLife\BlogBundle\Entity\PostSection $postSection = null)
     {
-        $this->blogSection = $blogSection;
+        $this->postSection = $postSection;
 
         return $this;
     }
 
     /**
-     * Get blogSection
+     * Get postSection
      *
-     * @return \TripOnLife\BlogBundle\Entity\BlogSection
+     * @return \TripOnLife\BlogBundle\Entity\PostSection
      */
-    public function getBlogSection()
+    public function getPostSection()
     {
-        return $this->blogSection;
+        return $this->postSection;
     }
 
     /**
@@ -286,5 +286,19 @@ class Blog
     public function setUpdatedValue()
     {
         $this->setUpdated(new \DateTime());
+    }
+
+    /**
+     * Set postSection
+     *
+     * @param \TripOnLife\BlogBundle\Entity\PostSection $postSection
+     *
+     * @return Post
+     */
+    public function setPostSection(\TripOnLife\BlogBundle\Entity\PostSection $postSection = null)
+    {
+        $this->postSection = $postSection;
+
+        return $this;
     }
 }

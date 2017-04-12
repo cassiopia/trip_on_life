@@ -2760,21 +2760,21 @@ article h4 {
 }
 
 article p {
-	margin: 10px 0px 23px !important;
+	margin: 10px 0px 10px !important;
 }
 
 /* 22.1. Comments */
 
 .sub-comment1 {
-	padding-left: 100px;
+	padding-left: 30px;
 }
 
 .sub-comment2 {
-	padding-left: 200px;
+	padding-left: 60px;
 }
 
 .sub-comment3 {
-	padding-left: 300px;
+	padding-left: 90px;
 }
 
 .comments-wrap h5 {
@@ -2790,7 +2790,7 @@ article p {
 
 .comments-wrap ul li {
 	list-style: none;
-	margin: 0 0 35px;
+	margin: 0 0 20px;
 	display: table;
 	width: 100%;
 	position: relative;
@@ -2810,7 +2810,7 @@ article p {
 	color: #3c3c3c;
 	font-weight: 400;
 	border-bottom: 1px solid #e5e5e5;
-	padding-bottom: 10px;
+	padding-bottom: 1px;
 	display: table;
 	margin-bottom: -4px;
 }
@@ -2845,8 +2845,8 @@ article p {
 	content: "";
 	width: 40px;
 	height: 40px;
-	border: 1px solid #dddddd;
-	border-width: 0 0 1px 1px;
+/*	border: 1px solid #dddddd;
+	border-width: 0 0 1px 1px;*/
 	position: absolute;
 	left: -160px;
 }

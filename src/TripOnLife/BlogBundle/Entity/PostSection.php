@@ -4,10 +4,10 @@ namespace TripOnLife\BlogBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="TripOnLife\BlogBundle\Entity\Repository\BlogSectionRepository")
- * @ORM\Table(name="blog_section")
+ * @ORM\Entity(repositoryClass="TripOnLife\BlogBundle\Entity\Repository\PostSectionRepository")
+ * @ORM\Table(name="post_section")
  */
-class BlogSection
+class PostSection
 {
     /**
      * @ORM\Id
@@ -42,7 +42,7 @@ class BlogSection
      * Set name
      *
      * @param string $name
-     * @return BlogSection
+     * @return PostSection
      */
     public function setName($name)
     {
@@ -65,7 +65,7 @@ class BlogSection
      * Set path
      *
      * @param string $name
-     * @return BlogSection
+     * @return PostSection
      */
     public function setPath($path)
     {

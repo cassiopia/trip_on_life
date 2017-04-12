@@ -17,26 +17,26 @@
         <div class="col-md-12">
             <div id="m-blog-content">
                 <div class="row">
-                    {% for blog in blogs %}
+                    {% for post in posts %}
                         <div class="col-md-6" data-animated="0">
                             <div class="item">
                                 <div class="mb-thumb">
-                                    <img src="{{ blog.image }}" class="img-responsive" alt=""/>
+                                    <img src="{{ post.image }}" class="img-responsive" alt=""/>
                                     <div class="date">18<span>aug</span></div>
                                     <span class="rmore">
-                                        <a href="{{ path('TripOnLifeBlogBundle_blog_showPost', { 'id': blog.id, 'type': blog.blogSection.name }) }}">
+                                        <a href="{{ path('TripOnLifeBlogBundle_blog_showPost', { 'id': post.id, 'type': post.postSection.name }) }}">
                                             читать дальше
                                         </a>
                                     </span>
                                 </div>
                                 <h4>
-                                    <a href="{{ path('TripOnLifeBlogBundle_blog_showPost', { 'id': blog.id, 'type': blog.blogSection.name }) }}">
-                                        {{ blog.title }}
+                                    <a href="{{ path('TripOnLifeBlogBundle_blog_showPost', { 'id': post.id, 'type': post.postSection.name }) }}">
+                                        {{ post.title }}
                                     </a>
                                 </h4>
                                 <div class="blog-meta">
                                     <span><i class="fa fa-comments"></i> 2 comments</span>
-                                    <span><i class="fa fa-user"></i> {{ blog.author}}</span>
+                                    <span><i class="fa fa-user"></i> {{ post.author}}</span>
                                 </div>
                                 <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor
                                     aliquet. Aenean sollicitudin, lorem quis bibendum auctor</p>
