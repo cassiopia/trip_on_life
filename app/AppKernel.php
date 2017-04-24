@@ -21,6 +21,7 @@ class AppKernel extends Kernel
             new TripOnLife\InfoBundle\TripOnLifeInfoBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
+            new TripOnLife\UserBundle\TripOnLifeUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

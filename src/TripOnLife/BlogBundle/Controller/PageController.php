@@ -32,8 +32,11 @@ class PageController extends Controller
 
         $post = $em->getRepository('TripOnLifeBlogBundle:Post')->find($id);
 
+        $comments = $em->getRepository('TripOnLifeBlogBundle:Comment')->findBy(['post'=> $id]);
+
         return $this->render('TripOnLifeBlogBundle:Page:show-post.html.twig', array(
-            'post' => $post
+            'post' => $post,
+            'comments' => $comments
         ));
 
     }

@@ -28,13 +28,13 @@
                             </div>
                             <h4>{{ post.title}}</h4>
                             <div class="blog-meta">
-                                <span><i class="fa fa-comments"></i> 2 comments</span>
+                                <span><i class="fa fa-comments"></i> {{comments|length }} comments</span>
                                 <span><i class="fa fa-user"></i> {{ post.author}}</span>
                             </div>
                             <p>{{ post.text}}</p>
 
 
-                            {% include 'TripOnLifeBlogBundle:Comment:index.html.twig' %}
+                            {% include 'TripOnLifeBlogBundle:Comment:index.html.twig' with { 'comments': comments } %}
 
                         </article>
                     </div>

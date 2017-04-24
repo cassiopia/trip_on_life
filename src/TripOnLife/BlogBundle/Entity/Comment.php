@@ -34,24 +34,22 @@ class Comment
     protected $post;
 
     /**
-     * @ORM\Column(type="integer")
      * @ORM\Column(name="user_id", type="integer", nullable=true)
-
      */
     protected $userId;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(name="name", type="string", nullable=true)
      */
     protected $name;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(name="email", type="string", nullable=true)
      */
     protected $email;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(name="reply_comment_id", type="integer", nullable=true)
      */
     protected $replyCommentId;
 

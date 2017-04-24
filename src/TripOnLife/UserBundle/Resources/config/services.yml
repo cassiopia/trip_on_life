@@ -1,0 +1,4 @@
+services:
+#    trip_on_life_user.example:
+#        class: TripOnLife\UserBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
