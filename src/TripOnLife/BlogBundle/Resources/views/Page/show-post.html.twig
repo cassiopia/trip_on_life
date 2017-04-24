@@ -28,7 +28,7 @@
                             </div>
                             <h4>{{ post.title}}</h4>
                             <div class="blog-meta">
-                                <span><i class="fa fa-comments"></i> {{comments|length }} comments</span>
+                                <span><i class="fa fa-comments"></i> {{ 'комментарий'|plural(comments|length) }}</span>
                                 <span><i class="fa fa-user"></i> {{ post.author}}</span>
                             </div>
                             <p>{{ post.text}}</p>

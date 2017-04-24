@@ -1,6 +1,6 @@
 <!-- Comments -->
 <div class="comments-wrap" data-animated="0">
-    <h5>{{ comments|length }} Comments</h5>
+    <h5>{{ 'комментарий'|plural(comments|length) }} </h5>
     <ul>
         {% for comment in comments %}
         <li>
