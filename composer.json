@@ -25,7 +25,9 @@
         "doctrine/data-fixtures" : "dev-master",
         "doctrine/doctrine-migrations-bundle": "dev-master",
         "doctrine/migrations": "dev-master",
-        "wapmorgan/morphos-twig": "^1.5"
+        "wapmorgan/morphos-twig": "^1.5",
+        //http://twig-extensions.readthedocs.io/en/latest/intl.html#arguments
+        "twig/extensions": "^1.4"
     },
     "require-dev": {
         "sensio/generator-bundle": "~3.0",

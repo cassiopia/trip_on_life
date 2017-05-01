@@ -23,8 +23,10 @@
                     <div class="col-md-12">
                         <article class="item">
                             <div class="mb-thumb">
-                                <img src="{{ post.image}}" class="img-responsive" alt=""/>
-                                <div class="date">18<span>Декабря</span></div>
+                                <img src="{{ post.image }}" class="img-responsive" alt=""/>
+                                <div class="date">{{ post.created|date('d') }}
+                                    <span>{{ post.created|localizeddate('none', 'none', app.request.locale, null, 'LLLL') }}</span>
+                                </div>
                             </div>
                             <h4>{{ post.title}}</h4>
                             <div class="blog-meta">
