@@ -13,7 +13,7 @@
                         {{ comment.name }}
                     {% endif %}
 
-                    <span>{{comment.updated|date('l, F j, Y') }}</span>
+                    <span>{{comment.updated|date('m.d.y') }}</span>
                 </div>
                 <p>{{ comment.message }}</p>
                 <span id="reply_comment_{{ comment.id }}" style="color:#75b209;"><i class="fa fa-comments"></i> Ответить</span>
